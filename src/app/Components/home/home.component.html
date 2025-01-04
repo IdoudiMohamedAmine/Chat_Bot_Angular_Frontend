@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="sidebar">
+    <button class="new-chat-btn" (click)="createNewChat()">New Chat</button>
+    <ul class="chat-list">
+      <li *ngFor="let chat of chats">
+        <span (click)="loadMessages(chat.id)">{{ chat.title }}</span>
+        <button class="modify-chat-btn" (click)="updateChat(chat.id)">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="delete-chat-btn" (click)="deleteChat(chat.id)">
+          <i class="fa fa-trash"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="chat-window">
+      <div *ngFor="let message of messages" [ngClass]="{'user-message': message.sender === 'user', 'ai-message': message.sender === 'bot'}">
+        <p>{{ message.content }}</p>
+      </div>
+    </div>
+    <div class="input-area">
+      <input type="text" placeholder="Type your prompt..." [(ngModel)]="prompt" />
+      <button (click)="submitPrompt()">➤</button>
+    </div>
+  </div>
+</div>
