@@ -2,62 +2,65 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #2c3e50;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #34495e;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.login-container h2 {
+    color: #ecf0f1;
+  }
+  
+  .login-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
-}
-
-.form-group {
+    color: #ecf0f1;
+  }
+  
+  .form-group {
     margin-bottom: 15px;
-}
-
-.form-group label {
+  }
+  
+  .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"] {
+    color: #ecf0f1;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #2c3e50;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-button[type="submit"] {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+  }
+  
+  button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-}
-
-button[type="submit"]:hover {
-    background-color: #218838;
-}
-
-a[routerLink] {
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #c0392b;
+  }
+  
+  a[routerLink] {
     display: block;
     text-align: center;
     margin-top: 10px;
-    color: #007bff;
+    color: #2ea44f;
     text-decoration: none;
-}
-
-a[routerLink]:hover {
+  }
+  
+  a[routerLink]:hover {
     text-decoration: underline;
-}
+  }

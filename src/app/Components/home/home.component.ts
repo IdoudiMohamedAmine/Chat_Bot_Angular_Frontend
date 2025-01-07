@@ -68,7 +68,11 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-
+  logout() {
+    // Clear user data and navigate to login page
+    this.user = null;
+    this.router.navigate(['/login']);
+  }
   createNewChat() {
     if (this.user) {
       this.chatService.createNewChat(this.user.getId()!).subscribe((chat: Chat) => {

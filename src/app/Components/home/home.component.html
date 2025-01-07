@@ -1,5 +1,8 @@
 <div class="container">
   <div class="sidebar">
+    <button class="logout-btn" (click)="logout()">
+      <i class="fa fa-sign-out-alt"></i> Logout
+    </button>
     <button class="new-chat-btn" (click)="createNewChat()">New Chat</button>
     <ul class="chat-list">
       <li *ngFor="let chat of chats">
@@ -12,6 +15,7 @@
         </button>
       </li>
     </ul>
+    
   </div>
   <div class="main-content">
     <div class="chat-window">
@@ -20,7 +24,7 @@
       </div>
     </div>
     <div class="input-area">
-      <input type="text" placeholder="Type your prompt..." [(ngModel)]="prompt" />
+      <input type="text" placeholder="Type your prompt..." [(ngModel)]="prompt" (keydown.enter)="submitPrompt()" />
       <button (click)="submitPrompt()">➤</button>
     </div>
   </div>

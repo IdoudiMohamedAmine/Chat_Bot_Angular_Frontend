@@ -34,6 +34,14 @@ export class ChatService {
   }
 
   updateChat(chatId: string, title: string): Observable<Chat> {
-    return this.http.put<Chat>(this.baseUrl + "/update/" + chatId, { title });
+    return this.http.put<Chat>(`${this.baseUrl}/update/${chatId}`, { title }).pipe(
+      map((response: Chat) => {
+        // Clean the title field if necessary
+        if (response.title.startsWith('{"title":')) {
+          response.title = JSON.parse(response.title).title;
+        }
+        return response;
+      })
+    );
   }
 }
